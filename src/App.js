@@ -6,6 +6,7 @@ import ResourceEffect from './component/ResourceEffect';
 import ThemeSwitch from './component/ThemeSwitch';
 import InputName from './component/InputName';
 import ThemeToggle from './component/ThemeToggle';
+import ThemeCallback from './component/ThemeCallback';
 
 export const ThemeContext = React.createContext()
 
@@ -28,6 +29,7 @@ function App() {
       <Resource />
       <ResourceEffect />
       <ThemeSwitch />
+      <ThemeCallback />
     </div>
   );
 }
