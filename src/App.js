@@ -7,6 +7,8 @@ import ThemeSwitch from './component/ThemeSwitch';
 import InputName from './component/InputName';
 import ThemeToggle from './component/ThemeToggle';
 import ThemeCallback from './component/ThemeCallback';
+import CounterReducer from './component/CounterReducer';
+import ToDoList from './component/TodoReducer'
 
 export const ThemeContext = React.createContext()
 
@@ -30,6 +32,8 @@ function App() {
       <ResourceEffect />
       <ThemeSwitch />
       <ThemeCallback />
+      <CounterReducer />
+      <ToDoList />
     </div>
   );
 }
