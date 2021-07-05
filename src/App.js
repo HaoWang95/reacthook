@@ -9,6 +9,7 @@ import ThemeToggle from './component/ThemeToggle';
 import ThemeCallback from './component/ThemeCallback';
 import CounterReducer from './component/CounterReducer';
 import ToDoList from './component/TodoReducer'
+import Counter from './component/reduxComponent/counter'
 
 export const ThemeContext = React.createContext()
 
@@ -34,6 +35,7 @@ function App() {
       <ThemeCallback />
       <CounterReducer />
       <ToDoList />
+      <Counter />
     </div>
   );
 }
