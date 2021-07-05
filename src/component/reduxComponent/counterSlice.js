@@ -10,10 +10,25 @@ export const counterSlice = createSlice({
         decrement: state => {state.value -= 1},
         incrementByAmount: (state, action) => {
             state.value += action.payload
+        },
+        decrementByAmount: (state, action) => {
+            state.value -= action.payload
         }
     }
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const incrementAsync = amount => dispatch => {
+    setTimeout(() => {
+        dispatch(incrementByAmount(amount))
+    }, 1000)
+};
+
+export const decrementAsync = amount => dispatch => {
+    setTimeout(() => {
+        dispatch(decrementByAmount(amount))
+    }, 1000)
+}
+
+export const { increment, decrement, incrementByAmount, decrementByAmount} = counterSlice.actions;
 export const selectCount = state => state.counter.value;
 export default counterSlice.reducer;
